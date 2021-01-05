@@ -1,5 +1,6 @@
 # custom files
-custom/
+# custom/ # disabled to sync themes
+custom/plugins
 
 # temp files directories
 cache/

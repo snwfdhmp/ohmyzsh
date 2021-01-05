@@ -54,6 +54,7 @@ prompt_segment() {
   local bg fg
   [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
+  
   if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
     echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
   else
@@ -212,6 +213,10 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+prompt_duck() {
+  [[ -d ".duck" && $(pwd) != $HOME ]] && echo -n " %{%F{yellow}%}Δ"
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -219,6 +224,7 @@ build_prompt() {
   prompt_virtualenv
   prompt_context
   prompt_dir
+  #prompt_duck
   prompt_git
   prompt_bzr
   prompt_hg

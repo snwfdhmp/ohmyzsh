@@ -30,7 +30,7 @@ alias -g LL="2>&1 | less"
 alias -g CA="2>&1 | cat -A"
 alias -g NE="2> /dev/null"
 alias -g NUL="> /dev/null 2>&1"
-alias -g P="2>&1| pygmentize -l pytb"
+# alias -g P="2>&1| pygmentize -l pytb" #disabled by me (snwfdhmp) because was raising an error at 'source ~/.zshrc' (because pygmentize is not installed, and not found with brew)
 
 alias dud='du -d 1 -h'
 alias duf='du -sh *'

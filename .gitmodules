@@ -1,0 +1,4 @@
+[submodule "custom/themes/spaceship-prompt"]
+	path = custom/themes/spaceship-prompt
+	url = git@github.com:snwfdhmp/spaceship-prompt.git
+	branch = master
